@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayotunde | AI Music Producer & Monetization Specialist</title>
+  <meta name="description" content="Broadcast-ready AI audio production, mixing, mastering, and global DSP distribution." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0d13;
+      --card-bg: #141722;
+      --card-border: #232838;
+      --accent: #00F0FF;
+      --accent-glow: rgba(0, 240, 255, 0.25);
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --green: #10b981;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 2rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.5px;
+    }
+
+    .brand span { color: var(--accent); }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero {
+      text-align: center;
+      padding: 4.5rem 1.5rem 3rem;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      background: rgba(0, 240, 255, 0.1);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, #00F0FF, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p.lead {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #000;
+      box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 28px rgba(0, 240, 255, 0.4);
+    }
+
+    .btn-secondary {
+      background-color: var(--card-bg);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: rgba(0, 240, 255, 0.4);
+    }
+
+    .card-tag {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: #fff;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .price-badge {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .features-list {
+      list-style: none;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .features-list li {
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .features-list li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    .portfolio-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.75rem;
+    }
+
+    .portfolio-card h4 {
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .audio-player-mock {
+      background: #0f121b;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    audio {
+      width: 100%;
+      height: 36px;
+      outline: none;
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 3rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">Ayotunde <span>Audio</span></div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Work</a>
+      <a href="https://github.com/AY-OmoP/AI-Music-Producer" target="_blank">Docs</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="badge">Commercial AI Audio & Monetization</div>
+    <h1>Turn Raw Prompts Into <span>Broadcast-Ready Hits</span></h1>
+    <p class="lead">
+      I bridge generative audio engines with professional DAW mixing, bespoke lyrics, and worldwide DSP distribution so you collect passive royalties with zero copyright headaches.
+    </p>
+    <div class="cta-group">
+      <a href="https://www.upwork.com" target="_blank" class="btn btn-primary">Hire Me on Upwork</a>
+      <a href="https://github.com/AY-OmoP/AI-Music-Producer/blob/main/CLIENT_ONBOARDING.md" target="_blank" class="btn btn-secondary">Client Onboarding</a>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <h2 class="section-title">Pre-Packaged Catalog Services</h2>
+    <p class="section-subtitle">Fixed scopes, transparent turnaround, and guaranteed commercial clearance.</p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-tag">Production</div>
+        <h3>Custom AI Audio & Sound Design</h3>
+        <div class="price-badge">$50 - $160</div>
+        <p>Original brand themes, podcast intros, and background beds mastered to streaming standards.</p>
+        <ul class="features-list">
+          <li>Custom BPM & Genre arrangement</li>
+          <li>DAW Stem cleaning & master (-14 LUFS)</li>
+          <li>WAV + MP3 320kbps deliverables</li>
+          <li>Commercial rights guarantee</li>
+        </ul>
+        <a href="https://www.upwork.com" target="_blank" class="btn btn-secondary" style="width: 100%; text-align: center;">Order on Upwork</a>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">Distribution</div>
+        <h3>Distribution & Monetization</h3>
+        <div class="price-badge">$60 - $220</div>
+        <p>End-to-end release setup across Spotify, Apple Music, and YouTube Content ID.</p>
+        <ul class="features-list">
+          <li>ISRC, UPC & metadata optimization</li>
+          <li>Direct distributor upload & scheduling</li>
+          <li>YouTube Content ID monetization setup</li>
+          <li>PRO registration roadmap</li>
+        </ul>
+        <a href="https://www.upwork.com" target="_blank" class="btn btn-secondary" style="width: 100%; text-align: center;">Order on Upwork</a>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">Turnkey</div>
+        <h3>Zero-to-DSP Single Launch</h3>
+        <div class="price-badge">$180 - $450</div>
+        <p>The complete end-to-end package: lyrics, track generation, mix/master, cover art, and release.</p>
+        <ul class="features-list">
+          <li>Original lyric writing & vocal arrange</li>
+          <li>Full multi-track stems export</li>
+          <li>3000x3000px release cover art</li>
+          <li>Direct live DSP release</li>
+        </ul>
+        <a href="https://www.upwork.com" target="_blank" class="btn btn-secondary" style="width: 100%; text-align: center;">Order on Upwork</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="portfolio">
+    <h2 class="section-title">Selected Case Studies</h2>
+    <p class="section-subtitle">Real-world commercial audio projects engineered for impact and stream revenue.</p>
+
+    <div class="grid">
+      <div class="portfolio-card">
+        <h4>Cyberpunk Synth-Wave Podcast Theme</h4>
+        <p>124 BPM driving theme engineered for an 85k-subscriber tech YouTube channel to eliminate stock audio copyright flags.</p>
+        <div class="audio-player-mock">
+          <audio controls preload="none">
+            <source src="samples/cyberpunk-sample.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
+          </audio>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <h4>Independent EP Distribution & Content ID</h4>
+        <p>Structured 4-track ambient release metadata, delivered clean ISRC tagging, and enabled immediate YouTube Content ID monetization across 35+ platforms.</p>
+        <div class="audio-player-mock">
+          <audio controls preload="none">
+            <source src="samples/ambient-sample.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
+          </audio>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <h4>Turnkey Pop-R&B Single Launch</h4>
+        <p>Written, produced, DAW mastered, packaged with 3000px artwork, and distributed live to Spotify, Apple, and Amazon Music.</p>
+        <div class="audio-player-mock">
+          <audio controls preload="none">
+            <source src="samples/pop-sample.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
+          </audio>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Ayotunde Omopariola. All rights reserved.</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="https://github.com/AY-OmoP/AI-Music-Producer" target="_blank">GitHub Repository</a> | 
+      <a href="https://github.com/AY-OmoP/AI-Music-Producer/blob/main/COMMERCIAL_LICENSE_AGREEMENT.md" target="_blank">Commercial License</a> |
+      <a href="https://github.com/AY-OmoP/AI-Music-Producer/blob/main/CLIENT_ONBOARDING.md" target="_blank">Client Intake</a>
+    </p>
+  </footer>
+
+</body>
+</html>
